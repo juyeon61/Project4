@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Weather</title>
+  </head>
+  <body>
+    <h1>날씨 정보에 따른 전기요금 예측</h1>
+    <form action = "http://127.0.0.1:5000/predict" method = "POST">
+        <select class="form-select" name="month">
+            <option selected>  해당 월  </option>
+            <option value="01">1월</option>
+            <option value="02">2월</option>
+            <option value="03">3월</option>
+            <option value="04">4월</option>
+            <option value="05">5월</option>
+            <option value="06">6월</option>
+            <option value="07">7월</option>
+            <option value="08">8월</option>
+            <option value="09">9월</option>
+            <option value="10">10월</option>
+            <option value="11">11월</option>
+            <option value="12">12월</option>
+          </select>
+        <select class="form-select" name="cntr">
+            <option selected>  전기계약종별  </option>
+            <option value="0">주택용</option>
+            <option value="1">일반용</option>
+            <option value="2">교육용</option>
+            <option value="3">산업용</option>
+            <option value="4">농사용</option>
+            <option value="5">가로등</option>
+            <option value="6">심 야</option>
+        </select>
+        <div>
+            <input type="text" class="form-control" placeholder="전기사용 고객 호수" name="custCnt">
+            <input type="text" class="form-control" placeholder="평균 현지기압(hPa)" name="pa">
+            <input type="text" class="form-control" placeholder="최고기온 평균(℃)" name="avgtamax">
+            <input type="text" class="form-control" placeholder="최저기온 평균(℃)" name="avgtamin">
+        </div>
+        <div>
+            <input type="text" class="form-control" placeholder="평균 기온(℃)" name="taavg">
+            <input type="text" class="form-control" placeholder="평균상대습도(%)" name="avghm">
+            <input type="text" class="form-control" placeholder="일조 총 시간(hr)" name="sumssday">
+            <input type="text" class="form-control" placeholder="일조-일조율(%)" name="daydur">
+        </div>
+        <p><button class="btn btn-primary" type="submit">확인해보기</button></p>
+    </form>
+  </body>
+</html>
